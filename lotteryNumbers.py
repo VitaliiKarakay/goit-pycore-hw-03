@@ -1,5 +1,9 @@
 import random
 
+const_min_number = 1
+const_max_number = 1000
+const_min_quantity = 1
+
 
 def get_number_tickets(min_number, max_number, quantity):
     if not params_validate(max_number, min_number, quantity):
@@ -10,5 +14,5 @@ def get_number_tickets(min_number, max_number, quantity):
 
 
 def params_validate(max_number, min_number, quantity):
-    return min_number < max_number or min_number > 1 or max_number < 1000 or quantity > 1
-
+    return (min_number < max_number or min_number > const_min_number or
+            max_number < const_max_number or quantity > const_min_quantity)
